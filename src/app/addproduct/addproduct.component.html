@@ -1,0 +1,13 @@
+<p>
+  This is add Product component !!!
+</p>
+<a [routerLink]="['/product']" routerLinkActive="router-link-active" >Back To Product</a>
+<h2> Add New Product</h2>
+<form class="container" [formGroup]="form" >
+  <label>Name : </label> <input type="text" placeholder="name" name ="name" formControlName="name"><br>
+  <label>Color : </label> <input type="text" placeholder="color" name="color" formControlName="color"><br>
+  <button (click)= "addProduct()">Add</button>
+
+</form>
+
+<div *ngIf="isAdded"> {{confirmationString}}</div>

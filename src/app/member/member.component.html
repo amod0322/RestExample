@@ -1,0 +1,20 @@
+<form class="container"  [formGroup]="form" >
+<input type="text" name="firstname" placeholder="firstname" formControlName="firstName"><br>
+<input type="text" name="lastname" placeholder="lastname" formControlName="lastName"><br>
+<select name="languages" formControlName="languages">
+  <option value="C++">C++</option>
+  <option value="Java">Java</option>
+  <option value="Angular">Angular</option>
+</select>
+<br>
+<button (click)="onSubmit()">Submit</button>
+
+</form>
+
+<button (click) ="display()">display</button>
+<p>
+  {{memberVariable}}
+  {{obj.id}}
+  {{obj.firstName}}
+  {{obj.lastName}}
+</p>
